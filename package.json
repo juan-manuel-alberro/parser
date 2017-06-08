@@ -1,0 +1,61 @@
+{
+  "name": "parser",
+  "version": "0.0.1",
+  "description": "A parser library to read complex objects",
+  "main": "lib/index.js",
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "ava 'test/**/*.test.js' --verbose",
+    "test:watch": "npm run test -- --watch",
+    "lint": "esw lib/ test/",
+    "lint:watch": "npm run lint -- --watch",
+    "cover": "nyc npm test",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "do-publish": "npm run lint && npm run cover && npm publish"
+  },
+  "files": [
+    "lib",
+    "LICENSE.md",
+    "README.md"
+  ],
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juan-manuel-alberro/parser.git"
+  },
+  "keywords": [
+    "parser",
+    "javascript",
+    "objects"
+  ],
+  "author": "Juan Manuel Alberro <jalberro@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/juan-manuel-alberro/parser/issues"
+  },
+  "homepage": "https://github.com/juan-manuel-alberro/parser#readme",
+  "devDependencies": {
+    "ava": "^0.19.1",
+    "babel-register": "^6.24.0",
+    "coveralls": "^2.12.0",
+    "eslint": "^3.18.0",
+    "eslint-config-airbnb": "^15.0.1",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-jsx-a11y": "^5.0.3",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-react": "^7.0.1",
+    "eslint-watch": "^3.0.1",
+    "nyc": "^11.0.2",
+    "sinon": "^2.1.0"
+  },
+  "dependencies": {},
+  "ava": {
+    "require": [
+      "babel-register"
+    ]
+  }
+}
