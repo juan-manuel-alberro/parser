@@ -50,7 +50,7 @@ let myObj = {
     }
   }
 };
-if (parse('myObj.some.useless.value')(myObj)) {
+if (parse('some.useless.value')(myObj)) {
   doSomething(myObj.some.useless.value)
 }
 ```
