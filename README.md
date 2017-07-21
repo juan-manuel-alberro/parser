@@ -24,7 +24,43 @@ Well, let me tell you!
 
 ## Getting started
 
-To Do
+Instead of having long validations like
+
+```js
+let myObj = {
+  some: {
+    useless: {
+      value: 7
+    }
+  }
+};
+if (myObj && 
+    myObj.some && 
+    myObj.some.useless && 
+    myObj.some.useless.value) {
+    doSomething(myObj.some.useless.value)
+}
+```
+Just use the parser in this simple way and avoid any issue if the object is not valid
+```js
+let myObj = {
+  some: {
+    useless: {
+      value: 7
+    }
+  }
+};
+if (parse('myObj.some.useless.value')(myObj)) {
+  doSomething(myObj.some.useless.value)
+}
+```
+
+## Tests & Coverage
+
+Just run `npm test` to run all the test, 100% coverage guaranteed.
+
+## To Do
+- [ ] Publish the library in NPM repository.
 
 # Author
 
